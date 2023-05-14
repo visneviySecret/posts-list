@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, Typography } from '@mui/material'
 import { getAuthor } from './api'
+import Loader from './Loader'
 
 function Author({ postId }) {
     const [author, setAuthor] = useState(null)
@@ -18,7 +19,9 @@ function Author({ postId }) {
         }
     }
 
-    if (!author) return <div>Loading...</div>
+    if (!author) {
+        return <Loader />
+    }
 
     return (
         <Card variant="outlined" sx={{ maxWidth: '500px', mb: '20px' }}>

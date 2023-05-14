@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, Typography } from '@mui/material'
 import { getPost } from './api'
+import { Skeleton } from '@mui/material'
 
 function PostCard({ postId }) {
     const [post, setPost] = useState(null)
@@ -18,7 +19,9 @@ function PostCard({ postId }) {
         }
     }
 
-    if (!post) return <div>Loading...</div>
+    if (!post) {
+        return <Skeleton variant="rectangular" width="100%" height={140} />
+    }
 
     return (
         <Card

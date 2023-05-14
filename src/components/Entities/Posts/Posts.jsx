@@ -11,7 +11,7 @@ function Posts({ user }) {
     useEffect(() => {
         const query = getQuery(user)
         fetchPosts(query)
-    }, [])
+    }, [user])
 
     const fetchPosts = async (query) => {
         try {

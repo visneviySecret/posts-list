@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { getComments } from './api'
-import {
-    Card,
-    CardContent,
-    List,
-    ListItem,
-    Paper,
-    Typography,
-} from '@mui/material'
+import { List, Typography } from '@mui/material'
 import Comment from '../../Shared/Comment/Comment'
 import CreateComment from '../../Shared/CreateComment/CreateComment'
+import Loader from './Loader'
 
 function Comments({ postId }) {
     const [comments, setComments] = useState(null)
@@ -27,7 +21,7 @@ function Comments({ postId }) {
         }
     }
 
-    if (!comments) return <div>Loading...</div>
+    if (!comments) return <Loader />
 
     return (
         <>
