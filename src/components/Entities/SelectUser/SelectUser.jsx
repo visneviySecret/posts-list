@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import Select from 'react-select'
 import { getUsers } from './api'
 import { getOptionsFromUserArray } from './utils'
+import { useAlert } from 'react-alert'
 
 function SelectUser({ setUser }) {
     const [users, setUsers] = useState([])
+    const alert = useAlert()
 
     useEffect(() => {
         fetchUsers()
@@ -21,6 +23,7 @@ function SelectUser({ setUser }) {
     }
 
     const handleSelect = (user) => {
+        alert.info(`Select user: ${user.label}`)
         setUser(user)
     }
 
