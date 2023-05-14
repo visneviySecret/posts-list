@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { getAuthorId } from './utils'
+import { postComment } from './api'
 
 function useCreateComment() {
     const [form, setForm] = useState({ name: '', comment: '', userId: '' })
