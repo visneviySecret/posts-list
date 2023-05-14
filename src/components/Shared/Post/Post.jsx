@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-    Divider,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemText,
-} from '@mui/material'
+import { Divider, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import { getPostLink } from './utils'
 import { Link } from 'react-router-dom'
 

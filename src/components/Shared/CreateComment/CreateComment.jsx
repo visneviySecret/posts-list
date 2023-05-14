@@ -1,23 +1,59 @@
 import React from 'react'
-import { CardContent, Paper, Typography } from '@mui/material'
+import {
+    Button,
+    Container,
+    FormControl,
+    FormHelperText,
+    Input,
+    Paper,
+    Typography,
+} from '@mui/material'
+import useCreateComment from './useCreateComment'
 
-function Comment({ name, body }) {
+function CreateComment() {
+    const { handleForm, submitForm, errors } = useCreateComment()
+
     return (
-        <Paper elevation={3} sx={{ maxWidth: '500px', mb: '10px' }}>
-            <CardContent>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {name}
-                </Typography>
-                <Typography
-                    sx={{ mb: 1.5, textAlign: 'left' }}
-                    color="text.secondary"
-                    variant="body2"
-                >
-                    {body}
-                </Typography>
-            </CardContent>
+        <Paper elevation={3} sx={{ mb: '10px', paddingBlock: '10px' }}>
+            <Typography>Add new comment:</Typography>
+            <Container
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    marginBlock: '10px',
+                }}
+            >
+                <FormControl sx={{ mb: 1.5 }}>
+                    <Input
+                        placeholder="Input your name"
+                        size="small"
+                        name="name"
+                        onChange={handleForm}
+                        error={!!errors.name}
+                    ></Input>
+                    <FormHelperText sx={{ color: '#d32f2f' }}>
+                        {errors.name}
+                    </FormHelperText>
+                </FormControl>
+                <FormControl>
+                    <Input
+                        multiline
+                        maxRows={4}
+                        placeholder="Write a comment"
+                        name="comment"
+                        onChange={handleForm}
+                        error={!!errors.comment}
+                    ></Input>
+                    <FormHelperText sx={{ color: '#d32f2f' }}>
+                        {errors.comment}
+                    </FormHelperText>
+                </FormControl>
+            </Container>
+            <Button variant="outlined" onClick={submitForm}>
+                Send
+            </Button>
         </Paper>
     )
 }
 
-export default Comment
+export default CreateComment

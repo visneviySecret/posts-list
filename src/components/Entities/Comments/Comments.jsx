@@ -9,6 +9,7 @@ import {
     Typography,
 } from '@mui/material'
 import Comment from '../../Shared/Comment/Comment'
+import CreateComment from '../../Shared/CreateComment/CreateComment'
 
 function Comments({ postId }) {
     const [comments, setComments] = useState(null)
@@ -33,6 +34,8 @@ function Comments({ postId }) {
             <Typography component="h3" sx={{ fontSize: 24 }}>
                 Comments:{' '}
             </Typography>
+
+            <CreateComment />
 
             <List>
                 {comments.map((comment) => (
