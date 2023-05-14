@@ -17,8 +17,8 @@ jobs:
               with:
                   node-version: 16
 
-            - name: Install and Build 
-                run: |
+            - name: Install and Build
+              run: |
                   npm ci
                   npm run build
 
