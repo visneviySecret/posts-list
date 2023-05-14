@@ -17,11 +17,12 @@ jobs:
               with:
                   node-version: 16
 
-            - name: Install Dependencies
-              run: yarn install
-
-            - name: Build
-              run: npm run build
+            - name: Install and Build 
+                run: |
+                  npm ci
+                  npm run build
 
             - name: Deploy
-              uses: actions/deploy-pages@v2
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  folder: build
