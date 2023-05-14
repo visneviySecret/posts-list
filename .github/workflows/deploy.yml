@@ -19,7 +19,7 @@ jobs:
 
             - name: Install and Build
               run: |
-                  npm ci
+                  ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
                   npm run build
 
             - name: Deploy
