@@ -1,6 +1,4 @@
 import axios from 'axios'
 
-export const postComment = (payload) =>
-    axios
-        .post('https://jsonplaceholder.typicode.com/posts', payload)
-        .then((res) => console.log(res))
+export const postComment = async (payload) =>
+    await axios.post('https://jsonplaceholder.typicode.com/posts', payload)

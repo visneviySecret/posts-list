@@ -29,7 +29,7 @@ function Comments({ postId }) {
                 Comments:{' '}
             </Typography>
 
-            <CreateComment />
+            <CreateComment setComments={setComments} />
 
             <List>
                 {comments.map((comment) => (

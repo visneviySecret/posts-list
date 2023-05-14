@@ -9,3 +9,5 @@ export const getAuthorId = async (form) => {
         )[0]?.id) || Date.now()
     return authorId
 }
+
+export const inital_form_value = { name: '', body: '', id: '' }

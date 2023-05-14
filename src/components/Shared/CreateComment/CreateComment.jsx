@@ -10,8 +10,9 @@ import {
 } from '@mui/material'
 import useCreateComment from './useCreateComment'
 
-function CreateComment() {
-    const { handleForm, submitForm, errors } = useCreateComment()
+function CreateComment({ setComments }) {
+    const { handleForm, submitForm, errors, form } =
+        useCreateComment(setComments)
 
     return (
         <Paper elevation={3} sx={{ mb: '10px', paddingBlock: '10px' }}>
@@ -25,11 +26,12 @@ function CreateComment() {
             >
                 <FormControl sx={{ mb: 1.5 }}>
                     <Input
-                        placeholder="Input your name"
+                        placeholder={'Input your name'}
                         size="small"
                         name="name"
                         onChange={handleForm}
                         error={!!errors.name}
+                        value={form.name}
                     ></Input>
                     <FormHelperText sx={{ color: '#d32f2f' }}>
                         {errors.name}
@@ -40,12 +42,13 @@ function CreateComment() {
                         multiline
                         maxRows={4}
                         placeholder="Write a comment"
-                        name="comment"
+                        name="body"
                         onChange={handleForm}
-                        error={!!errors.comment}
+                        error={!!errors.body}
+                        value={form.body}
                     ></Input>
                     <FormHelperText sx={{ color: '#d32f2f' }}>
-                        {errors.comment}
+                        {errors.body}
                     </FormHelperText>
                 </FormControl>
             </Container>
