@@ -23,8 +23,4 @@ jobs:
                   npm run build
 
             - name: Deploy
-              uses: actions/deploy-pages@v2
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  ACTIONS_ID_TOKEN_REQUEST_URL: ${{ secrets.GITHUB_TOKEN }}
-                  ACTIONS_ID_TOKEN_REQUEST_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              uses: actions/deploy-pages@v3
