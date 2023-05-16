@@ -38,7 +38,7 @@ function DefaultLayout({ children }) {
                     )
                 })}
             </Breadcrumbs>
-            <div>{...children}</div>
+            <div>{children}</div>
         </div>
     )
 }

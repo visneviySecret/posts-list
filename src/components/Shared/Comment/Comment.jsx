@@ -3,7 +3,7 @@ import { CardContent, Paper, Typography } from '@mui/material'
 
 function Comment({ name, body }) {
     return (
-        <Paper elevation={3} sx={{ maxWidth: '500px', mb: '10px' }}>
+        <Paper elevation={3} sx={{ mb: '10px' }}>
             <CardContent>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     {name}

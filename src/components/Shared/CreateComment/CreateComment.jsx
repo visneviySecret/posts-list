@@ -15,7 +15,15 @@ function CreateComment({ setComments }) {
         useCreateComment(setComments)
 
     return (
-        <Paper elevation={3} sx={{ mb: '10px', paddingBlock: '10px' }}>
+        <Paper
+            elevation={3}
+            sx={{
+                maxWidth: '500px',
+                marginInline: 'auto',
+                mb: '10px',
+                paddingBlock: '10px',
+            }}
+        >
             <Typography>Add new comment:</Typography>
             <Container
                 sx={{

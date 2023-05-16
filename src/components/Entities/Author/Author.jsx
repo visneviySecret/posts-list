@@ -24,7 +24,14 @@ function Author({ postId }) {
     }
 
     return (
-        <Card variant="outlined" sx={{ maxWidth: '500px', mb: '20px' }}>
+        <Card
+            variant="outlined"
+            sx={{
+                maxWidth: '500px',
+                marginInline: 'auto',
+                mb: '20px',
+            }}
+        >
             <CardContent>
                 <Typography component="h5" sx={{ fontSize: 24 }}>
                     Author:

@@ -26,7 +26,11 @@ function PostCard({ postId }) {
     return (
         <Card
             variant="outlined"
-            sx={{ maxWidth: '500px', marginBottom: '20px' }}
+            sx={{
+                maxWidth: '500px',
+                marginInline: 'auto',
+                marginBottom: '20px',
+            }}
         >
             <CardContent>
                 <Typography component="h5" sx={{ fontSize: 24 }}>
