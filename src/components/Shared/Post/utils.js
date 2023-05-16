@@ -1,3 +1,3 @@
 export const getPostLink = (post) => {
-    return `/post/${post.id}`
+    return `post/${post.id}`
 }

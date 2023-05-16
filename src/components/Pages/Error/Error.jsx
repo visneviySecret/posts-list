@@ -10,7 +10,7 @@ export default function ErrorPage() {
             <h1>Oops!</h1>
             <p>Этой страницы не существует.</p>
             <Button>
-                <Link to={'/'}>Вернуться на домашнюю страницу.</Link>
+                <Link to={'/posts-list'}>Вернуться на домашнюю страницу.</Link>
             </Button>
             <p>
                 <i>{error.statusText || error.message}</i>

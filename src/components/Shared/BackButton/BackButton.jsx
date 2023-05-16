@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function BackButton() {
     return (
         <Button>
-            <Link to="/">Go back</Link>
+            <Link to="/posts-list">Go back</Link>
         </Button>
     )
 }

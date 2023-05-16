@@ -5,13 +5,13 @@ import { createBrowserRouter } from 'react-router-dom'
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/posts-list',
         // path: '/',
         element: <App />,
         errorElement: <ErrorPage />,
     },
     {
-        path: '/post/:postId',
+        path: '/posts-list/post/:postId',
         // path: '/post/:postId',
         element: <PostPage />,
         errorElement: <ErrorPage />,
