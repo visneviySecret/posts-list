@@ -3,37 +3,12 @@ import React from 'react'
 
 function Loader() {
     return (
-        <div>
-            <Skeleton
-                variant="rectangular"
-                width="100%"
-                height={180}
-                sx={{ mb: '20px' }}
-            />
-            <Skeleton
-                variant="rectangular"
-                width="100%"
-                height={180}
-                sx={{ mb: '20px' }}
-            />
-            <Skeleton
-                variant="rectangular"
-                width="100%"
-                height={180}
-                sx={{ mb: '20px' }}
-            />
-            <Skeleton
-                variant="rectangular"
-                width="100%"
-                height={180}
-                sx={{ mb: '20px' }}
-            />
-            <Skeleton
-                variant="rectangular"
-                width="100%"
-                height={180}
-                sx={{ mb: '20px' }}
-            />
+        <div style={{ marginInline: 'auto', width: '500px' }}>
+            <Skeleton variant="rectangular" height={180} sx={{ mb: '20px' }} />
+            <Skeleton variant="rectangular" height={180} sx={{ mb: '20px' }} />
+            <Skeleton variant="rectangular" height={180} sx={{ mb: '20px' }} />
+            <Skeleton variant="rectangular" height={180} sx={{ mb: '20px' }} />
+            <Skeleton variant="rectangular" height={180} sx={{ mb: '20px' }} />
         </div>
     )
 }
