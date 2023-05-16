@@ -34,9 +34,8 @@ function Posts({ user }) {
     return (
         <List
             sx={{
-                width: '100%',
-                maxWidth: 700,
-                bgcolor: 'background.paper',
+                width: 700,
+                marginInline: 'auto',
             }}
         >
             {posts.map((post, index) => (

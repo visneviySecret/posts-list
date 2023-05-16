@@ -35,7 +35,7 @@ function SelectUser({ setUser }) {
         return (
             <Skeleton
                 variant="rectangular"
-                width="100%"
+                width="700px"
                 height={30}
                 sx={{ mb: '20px' }}
             ></Skeleton>
@@ -43,7 +43,13 @@ function SelectUser({ setUser }) {
     }
 
     return (
-        <div>
+        <div
+            style={{
+                maxWidth: '700px',
+                marginInline: 'auto',
+                marginBottom: '20px',
+            }}
+        >
             <Select
                 options={users}
                 onChange={handleSelect}
