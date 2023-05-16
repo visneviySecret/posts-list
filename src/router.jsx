@@ -3,7 +3,7 @@ import ErrorPage from './components/Pages/Error/Error.jsx'
 import PostPage from './components/Pages/PostPage/PostPage.jsx'
 import { createBrowserRouter } from 'react-router-dom'
 
-export const baseUrl = '/posts-list'
+export const baseUrl = '/'
 
 export const router = createBrowserRouter([
     {
